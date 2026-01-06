@@ -1,0 +1,16 @@
+# OS junk
+.DS_Store
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# Build output
+build/
+target/
+bin/
+
+# Secrets
+.env
+*.properties

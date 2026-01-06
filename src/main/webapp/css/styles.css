@@ -1,0 +1,41 @@
+/* BriefUp Navbar Style */
+.navbar {
+  border-bottom: 1px solid #e6e6e6;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hover on links */
+.nav-link:hover {
+  color: #0070c9 !important; /* light blue hover */
+}
+
+/* Button */
+.start-btn {
+  background-color: #1f3b77; /* dark BriefUp blue */
+  color: white !important;
+  border-radius: 25px;
+  transition: 0.2s ease;
+}
+
+.start-btn:hover {
+  background-color: #244b9b; /* slightly brighter blue */
+}
+
+/* Mobile layout fix */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+    gap: 10px;
+  }
+}
+.logo {
+  height: 58px;       /* perfect balanced size */
+  width: 58;
+  object-fit: contain;
+  margin-top: -2px;   /* aligns perfectly with text */
+}
+
+.navbar .container {
+  padding-left: 20px; /* moves logo closer to left edge */
+  padding-right: 40px; /* keeps right spacing clean */
+}

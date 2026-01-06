@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BriefUp | Login</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand fw-bold fs-4 text-primary" href="main.html">BriefUp</a>
+      <a href="main.html" class="btn btn-outline-primary ms-auto px-4 py-2 rounded-pill">Back to Home</a>
+    </div>
+  </nav>
+
+  <!-- LOGIN WRAPPER -->
+  <section class="login-section d-flex align-items-center justify-content-center">
+    <div class="login-card shadow-lg">
+      <div class="text-center mb-4">
+        <i class="bi bi-lightning-charge-fill text-primary fs-1"></i>
+        <h3 class="fw-bold mt-2">Welcome Back</h3>
+        <p class="text-muted mb-0">Sign in to continue learning</p>
+      </div>
+
+      <!-- LOGIN FORM -->
+      <form action="login" method="post" id="loginForm">
+        <div class="mb-3">
+          <label for="email" class="form-label fw-semibold">Email address</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label fw-semibold">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+        </div>
+
+        <div class="d-grid">
+          <button type="submit" class="btn btn-gradient py-2 fw-semibold">Login</button>
+        </div>
+      </form>
+
+      <p class="text-center mt-4 text-muted">
+        New to BriefUp? <a href="signup.html" class="fw-semibold text-primary">Sign up</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-4 text-muted small bg-white border-top">
+    &copy; 2025 BriefUp. Learn Smarter.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/auth.js"></script>
+
+  <!-- SIMPLE ERROR ALERT -->
+  <script>
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get("error") === "invalid") {
+    alert("Invalid email or password.");
+  }
+
+  if (params.get("error") === "login_required") {
+    alert("Please log in first.");
+  }
+</script>
+
+</body>
+</html>
